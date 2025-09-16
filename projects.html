@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Projects | Jannhya Chheda</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* simple calc styling */
+        #calc{max-width:260px;margin:2rem auto;border:2px solid var(--brown-900);padding:1rem;border-radius:6px;}
+        #calc input[type="text"]{width:100%;padding:0.4rem;margin-bottom:0.5rem;font-size:1rem;text-align:right;}
+        #calc button{width:23%;padding:0.4rem;margin:1%;font-size:1rem;}
+        .neg{color:red;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Jannhya Chheda</h1>
+        <p>My Online Résumé</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Projects</h2>
+
+        <section class="section">
+            <h3>Responsive Résumé Website (this page)</h3>
+            <p>Static site built from scratch using semantic HTML5, CSS flexbox, and vanilla JS for an interactive calculator.</p>
+        </section>
+
+        <section class="section">
+            <h3>Investment Analysis Toolkit (Python)</h3>
+            <p>Created back-testing framework and DCF valuation scripts for multifamily real-estate deals.</p>
+        </section>
+
+        <!-- ------- JavaScript Calculator -------- -->
+        <h3 style="margin-top:3rem;">JavaScript Calculator</h3>
+        <div id="calc">
+            <input id="display" type="text" readonly>
+            <div>
+                <button onclick="press('7')">7</button><button onclick="press('8')">8</button><button onclick="press('9')">9</button><button onclick="press('/')">÷</button>
+            </div>
+            <div>
+                <button onclick="press('4')">4</button><button onclick="press('5')">5</button><button onclick="press('6')">6</button><button onclick="press('*')">×</button>
+            </div>
+            <div>
+                <button onclick="press('1')">1</button><button onclick="press('2')">2</button><button onclick="press('3')">3</button><button onclick="press('-')">−</button>
+            </div>
+            <div>
+                <button onclick="press('0')">0</button><button onclick="press('.')">.</button><button onclick="calculate()">=</button><button onclick="press('+')">+</button>
+            </div>
+            <button style="width:100%;margin-top:0.6rem;background:var(--pink-200);" onclick="clearDisplay()">Clear</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Jannhya Chheda — <a href="credits.html">Credits</a></p>
+    </footer>
+</div>
+
+<script>
+    function press(val){document.getElementById('display').value += val;}
+    function calculate(){
+        const d=document.getElementById('display');
+        try{d.value = eval(d.value);if(+d.value<0)d.classList
