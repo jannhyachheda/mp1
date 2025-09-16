@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Projects | Jannhya Chheda</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* simple calc styling */
-        #calc{max-width:260px;margin:2rem auto;border:2px solid var(--brown-900);padding:1rem;border-radius:6px;}
-        #calc input[type="text"]{width:100%;padding:0.4rem;margin-bottom:0.5rem;font-size:1rem;text-align:right;}
-        #calc button{width:23%;padding:0.4rem;margin:1%;font-size:1rem;}
-        .neg{color:red;}
-    </style>
 </head>
 <body>
 <div class="container">
@@ -36,32 +29,32 @@
         <h2>Projects</h2>
 
         <section class="section">
-            <h3>Responsive Résumé Website (this page)</h3>
-            <p>Static site built from scratch using semantic HTML5, CSS flexbox, and vanilla JS for an interactive calculator.</p>
+            <h3>Responsive Résumé Website</h3>
+            <p>Static site built with semantic HTML5, CSS flexbox, and vanilla JavaScript.</p>
         </section>
 
-        <section class="section">
-            <h3>Investment Analysis Toolkit (Python)</h3>
-            <p>Created back-testing framework and DCF valuation scripts for multifamily real-estate deals.</p>
-        </section>
-
-        <!-- ------- JavaScript Calculator -------- -->
+        <!-- ---------- Calculator ---------- -->
         <h3 style="margin-top:3rem;">JavaScript Calculator</h3>
-        <div id="calc">
-            <input id="display" type="text" readonly>
-            <div>
-                <button onclick="press('7')">7</button><button onclick="press('8')">8</button><button onclick="press('9')">9</button><button onclick="press('/')">÷</button>
+
+        <div id="calc-shell">
+            <div class="row">
+                <input id="num1" type="text" placeholder="First #" />
+                <input id="num2" type="text" placeholder="Second #" />
             </div>
-            <div>
-                <button onclick="press('4')">4</button><button onclick="press('5')">5</button><button onclick="press('6')">6</button><button onclick="press('*')">×</button>
+
+            <div class="row">
+                <button onclick="add()">+</button>
+                <button onclick="subtract()">−</button>
+                <button onclick="multiply()">×</button>
             </div>
-            <div>
-                <button onclick="press('1')">1</button><button onclick="press('2')">2</button><button onclick="press('3')">3</button><button onclick="press('-')">−</button>
+
+            <div class="row">
+                <button onclick="divide()">÷</button>
+                <button onclick="power()">^</button>
+                <button class="clear" onclick="clearCalc()">Clear</button>
             </div>
-            <div>
-                <button onclick="press('0')">0</button><button onclick="press('.')">.</button><button onclick="calculate()">=</button><button onclick="press('+')">+</button>
-            </div>
-            <button style="width:100%;margin-top:0.6rem;background:var(--pink-200);" onclick="clearDisplay()">Clear</button>
+
+            <h4 id="result"></h4>
         </div>
     </main>
 
@@ -70,8 +63,6 @@
     </footer>
 </div>
 
-<script>
-    function press(val){document.getElementById('display').value += val;}
-    function calculate(){
-        const d=document.getElementById('display');
-        try{d.value = eval(d.value);if(+d.value<0)d.classList
+<script src="calc.js"></script>
+</body>
+</html>

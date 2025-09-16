@@ -80,3 +80,31 @@ footer{
 }
 footer a{color:var(--pink-200);text-decoration:none;}
 footer a:hover{text-decoration:underline;}
+
+/* ---------- CALCULATOR ---------- */
+#calc-shell{
+    max-width:300px;margin:2rem auto;padding:1rem;
+    border:2px solid var(--brown-900);border-radius:6px;
+    background:var(--beige-100);display:flex;flex-direction:column;gap:0.6rem;
+}
+#calc-shell .row{display:flex;gap:0.4rem;justify-content:space-between;}
+#calc-shell input{
+    flex:1;padding:0.4rem;font-size:calc(0.9rem + .2vw);
+    border:1px solid var(--brown-700);border-radius:4px;text-align:right;
+}
+#calc-shell button{
+    flex:1;padding:0.4rem;font-size:calc(0.9rem + .2vw);
+    background:var(--brown-900);color:var(--beige-100);
+    border:none;border-radius:4px;cursor:pointer;
+}
+#calc-shell button:hover{background:var(--pink-200);color:var(--text-dark);}
+#calc-shell button.clear{background:var(--brown-700);}
+#calc-shell h4{
+    min-height:2rem;text-align:center;
+    font-size:calc(1rem + .3vw);margin-top:.3rem;
+}
+#calc-shell h4.neg{color:red;}
+@media(max-width:500px){
+    #calc-shell{max-width:100%;padding:0.8rem;}
+    #calc-shell .row{flex-direction:column;}
+}
