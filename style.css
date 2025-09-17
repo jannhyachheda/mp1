@@ -41,7 +41,7 @@ main{flex:1;padding:2rem;min-height:100vh;width:100%;}
 ul.bullets{padding-left:1.3rem;} ul.bullets li{margin-bottom:0.5rem;}
 
 /* REFERENCE CARDS (beige theme) */
-.ref-card{background:var(--beige-100);border-left:6px solid var(--brown-700);padding:1rem 1.2rem;margin-bottom:1.6rem;border-radius:6px;}
+.ref-card{background:var(--beige-100);border-left:6px solid var(--pink-200);padding:1rem 1.2rem;margin-bottom:1.6rem;border-radius:6px;}
 .ref-card em{color:var(--brown-900);}  /* subtle highlight */
 
 /* CALCULATOR (standard + vertical variant) */
