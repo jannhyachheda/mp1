@@ -6,61 +6,52 @@
     <title>Projects | Jannhya Chheda</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="calc-vert">
 <div class="container">
-    <header>
-        <h1>Jannhya Chheda</h1>
-        <p>My Online Résumé</p>
-    </header>
+    <header><h1>Jannhya Chheda</h1><p>My Online Resume</p></header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="certifications.html">Certifications</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="references.html">References</a></li>
-        </ul>
-    </nav>
+    <div class="page-flex">
+        <nav class="fixed-side">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
 
-    <main>
-        <h2>Projects</h2>
+        <main>
+            <h2>Projects</h2>
 
-        <section class="section">
-            <h3>Responsive Résumé Website</h3>
-            <p>Static site built with semantic HTML5, CSS flexbox, and vanilla JavaScript.</p>
-        </section>
+            <section class="section">
+                <h3>Responsive Résumé Website</h3>
+                <p>Static site built with semantic HTML5, CSS flexbox, and vanilla JavaScript.</p>
+            </section>
 
-        <!-- ---------- Calculator ---------- -->
-        <h3>JavaScript Calculator</h3>
+            <h3>JavaScript Calculator</h3>
 
-        <div id="calc-shell">
-            <div class="row">
+            <div id="calc-shell">
                 <input id="num1" type="text" placeholder="First #">
                 <input id="num2" type="text" placeholder="Second #">
+
+                <div class="row">
+                    <button onclick="add()">+</button>
+                    <button onclick="subtract()">−</button>
+                    <button onclick="multiply()">×</button>
+                    <button onclick="divide()">÷</button>
+                    <button onclick="power()">^</button>
+                    <button onclick="clearCalc()">C</button>
+                </div>
+
+                <div id="result" class="result-box"></div>
             </div>
+        </main>
+    </div>
 
-            <div class="row">
-                <button onclick="add()">+</button>
-                <button onclick="subtract()">−</button>
-                <button onclick="multiply()">×</button>
-            </div>
-
-            <div class="row">
-                <button onclick="divide()">÷</button>
-                <button onclick="power()">^</button>
-                <button class="clear" onclick="clearCalc()">Clear</button>
-            </div>
-
-            <h4 id="result"></h4>
-        </div>
-    </main>
-
-    <footer>
-        <p>© 2025 Jannhya Chheda — <a href="credits.html">Credits</a></p>
-    </footer>
+    <footer><p>© 2025 Jannhya Chheda — <a href="credits.html">Credits</a></p></footer>
 </div>
 <script src="calc.js"></script>
 </body>

@@ -20,7 +20,7 @@ function divide(){
 function power(){
     const [a,b] = getVals();
     let res = 1;
-    for(let i = 0; i < b; i++){ res *= a; }   // required for-loop
+    for(let i = 0; i < b; i++){ res *= a; }
     show(res);
 }
 function clearCalc(){
